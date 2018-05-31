@@ -7,23 +7,54 @@
     <div class="body-content">
       <div v-if="authenticated">
         <h1>Welcome</h1>
-        <input name="title" class="title-enter" type="text" placeholder="Title" v-model="entry.title"/>
-        <input name="subtitle" class="title-enter" type="text" placeholder="Subtitle" v-model="entry.subtitle"/>
+        <input 
+          v-model="entry.title" 
+          name="title" 
+          class="title-enter" 
+          type="text" 
+          placeholder="Title"
+        >
+        <input 
+          v-model="entry.subtitle" 
+          name="subtitle" 
+          class="title-enter" 
+          type="text" 
+          placeholder="Subtitle"
+        >
         <textarea
-          class="text-enter"
           v-model="entry.body"
+          class="text-enter"
           placeholder="Body"
         />
-        <button class="submit" @click="submitBlogItem">Submit</button>
+        <button 
+          class="submit" 
+          @click="submitBlogItem"
+        >Submit</button>
       </div>
       <div v-else>
         <div class="login-item">
           <!-- <label>Username: </label> -->
-          <input id="user-name" placeholder="Username" @keydown.enter.stop.prevent="nextinput" tabIndex="1" v-model="username" type="text" required/>
+          <input 
+            id="user-name" 
+            v-model="username" 
+            placeholder="Username" 
+            tabIndex="1" 
+            type="text" 
+            required 
+            @keydown.enter.stop.prevent="nextinput"
+          >
         </div>
         <div class="login-item">
           <!-- <label>Password: </label> -->
-          <input id="user-password" placeholder="Password" @keydown.enter.stop.prevent="submitMe" tabIndex="1" v-model="password" type="password" required/>
+          <input 
+            id="user-password" 
+            v-model="password" 
+            placeholder="Password" 
+            tabIndex="1" 
+            type="password" 
+            required 
+            @keydown.enter.stop.prevent="submitMe"
+          >
         </div>
       </div>
     </div>
@@ -32,7 +63,7 @@
 
 <script>
 export default {
-  name: "buddha-mode",
+  name: "BuddhaMode",
   data() {
     return {
       title: "Pedo mellon a minno",
@@ -42,14 +73,17 @@ export default {
       entry: {
         title: null,
         subtitle: null,
-        body: null
-      }
+        body: null,
+      },
     };
   },
   computed: {
     authenticated() {
       return this.$store.getters.isAuth;
-    }
+    },
+  },
+  mounted() {
+    //do something after mounting vue instance
   },
   methods: {
     nextinput() {
@@ -61,7 +95,7 @@ export default {
       try {
         const res = this.$store.dispatch("loginBuddhaMode", {
           username,
-          password
+          password,
         });
         if (res) {
           console.log("Success!");
@@ -77,16 +111,13 @@ export default {
       try {
         this.$store.dispatch("saveBlogEntry", {
           userJwt,
-          content: this.entry
+          content: this.entry,
         });
       } catch (e) {
         console.error(e);
       }
-    }
+    },
   },
-  mounted() {
-    //do something after mounting vue instance
-  }
 };
 </script>
 

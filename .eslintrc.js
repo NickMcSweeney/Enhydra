@@ -4,6 +4,7 @@ module.exports = {
     node: true
   },
   'extends': [
+    '.eslintrc.json',
     'plugin:vue/essential',
     '@vue/prettier'
   ],
