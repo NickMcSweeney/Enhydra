@@ -60,7 +60,9 @@ typings/
 
 # dotenv environment variables file
 .env
-lutris.env
+
+# dev db
+/Assets/.data
 
 # package-lock
 package-lock.json

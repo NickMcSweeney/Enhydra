@@ -8,7 +8,7 @@ const fs = require("fs");
 const assert = require("assert");
 const path = require("path");
 
-const PATH = path.join(__dirname, "../");
+const PATH = path.join(__dirname, "../amotken-security/");
 
 const dotenv = require("dotenv").config({ path: PATH + ".env" });
 if (dotenv.error) return console.error(dotenv.error);

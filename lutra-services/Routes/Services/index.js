@@ -7,7 +7,7 @@ const path = require("path");
 
 console.log("STARTING");
 
-const PATH = path.join(__dirname, "../../../");
+const PATH = path.join(__dirname, "../../../amotken-security/");
 
 console.log(PATH);
 
