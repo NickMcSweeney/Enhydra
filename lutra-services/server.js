@@ -4,27 +4,35 @@ const bodyParser = require("koa-bodyparser");
 const cors = require("@koa/cors");
 const serve = require("koa-static");
 const mount = require("koa-mount");
+const fs = require("fs");
 const assert = require("assert");
+const path = require("path");
 
-const dotenv = require("dotenv").config();
+const PATH = path.join(__dirname, "../");
+
+const dotenv = require("dotenv").config({ path: PATH + ".env" });
 if (dotenv.error) return console.error(dotenv.error);
 const ENV = process.env;
+
+console.log("server", ENV.PWD);
 
 const backend = new Koa();
 const frontend = new Koa();
 const route = new Router();
 
-const myRoutes = require("./routes.js");
+const myRoutes = require("./Routes");
+
+console.log(myRoutes);
 
 console.log(`Starting ${ENV.APP_NAME} server @ ${ENV.BASE_URL}`);
 
-route.post("/login", myRoutes.login);
-route.post("/verifyToken", myRoutes.verifyToken);
-route.post("/blog/addItem", myRoutes.saveEntry);
-route.post("/blog/getItem", myRoutes.getItem);
-route.get("/blog/listItems", myRoutes.listBlogItems);
+route.post("/login", myRoutes.Auth.login);
+route.post("/verifyToken", myRoutes.Auth.verifyToken);
+route.post("/blog/addItem", myRoutes.Data.saveEntry);
+route.post("/blog/getItem", myRoutes.Data.getItem);
+route.get("/blog/listItems", myRoutes.Data.listBlogItems);
 
-route.get("/test/", myRoutes.test);
+route.get("/test/", myRoutes.Data.test);
 // route.get("/readAll/", myRoutes.readFromDb);
 // route.get("/getNamedData/:item", myRoutes.getNamedData);
 //
