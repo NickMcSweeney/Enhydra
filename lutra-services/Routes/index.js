@@ -1,5 +1,3 @@
-"use strict";
-
 const fs = require("fs");
 const assert = require("assert");
 
@@ -33,12 +31,7 @@ const api = {
   listBlogItems: Blog.listBlogItems,
   getItem: Blog.getItem,
   saveEntry: Blog.saveEntry,
-  saveFile: FileStore.saveFile,
-  writeFileToDb: FileStore.writeFileToDb,
-  listAll: FileStore.listAll,
-  removeFile: FileStore.removeFile,
-  removeFileFromDb: FileStore.removeFileFromDb,
-  syncFiles: FileStore.syncFiles,
+  uploadFile: FileStore.uploadFile,
 };
 
-module.exports = api
+module.exports = api;

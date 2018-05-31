@@ -60,9 +60,7 @@ module.exports = {
       let body = new Object();
       data.forEach((key, i) => {
         console.log(key[item]);
-        if (key[item]) {
-          body.story = key[item];
-        }
+        if (key[item]) body.story = key[item];
       });
       body = JSON.stringify(body);
 
@@ -93,11 +91,8 @@ module.exports = {
       let username = "";
       let password = "";
       data.forEach(obj => {
-        if (obj.username) {
-          username = obj.username;
-        } else if (obj.password) {
-          password = obj.password;
-        }
+        if (obj.username) username = obj.username;
+        else if (obj.password) password = obj.password;
       });
 
       if (decoded[username] === password) {
@@ -111,16 +106,11 @@ module.exports = {
         listItems.list.forEach(item => {
           newListItems.push(item);
         });
-        if (newListItems.indexOf(entryTitle) < 0) {
-          newListItems.push(entryTitle);
-        } else {
-          throw "Duplicate title";
-        }
+        if (newListItems.indexOf(entryTitle) < 0) newListItems.push(entryTitle);
+        else throw "Duplicate title";
+
         console.log({ list: listItems.list }, { list: newListItems });
-        let res = await blogDB.update(
-          { list: listItems.list },
-          { list: newListItems }
-        );
+        let res = await blogDB.update({ list: listItems.list }, { list: newListItems });
         console.log(res.result);
         let newEntry = {};
         newEntry[entryTitle] = {
@@ -141,9 +131,8 @@ module.exports = {
         ctx.response.type = "application/json";
 
         return ctx.response;
-      } else {
-        throw "falure - no match for account in db";
       }
+      throw "falure - no match for account in db";
     } catch (e) {
       console.error(e);
       ctx.response.type = "application/json";

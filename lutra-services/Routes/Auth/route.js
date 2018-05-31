@@ -14,20 +14,14 @@ async function login(ctx) {
     let username = "";
     let password = "";
     data.forEach(obj => {
-      if (obj.username) {
-        username = obj.username;
-      } else if (obj.password) {
-        password = obj.password;
-      }
+      if (obj.username) username = obj.username;
+      else if (obj.password) password = obj.password;
     });
     console.log(
-      username + " vs " + ctx.request.body.username,
-      password + " vs " + ctx.request.body.password
+      `${username} vs ${ctx.request.body.username}`,
+      `${password} vs ${ctx.request.body.password}`
     );
-    if (
-      username === ctx.request.body.username &&
-      password === ctx.request.body.password
-    ) {
+    if (username === ctx.request.body.username && password === ctx.request.body.password) {
       const cert = await fs.readFileSync("./cert/private/key.pem");
       let auth = {};
       auth[username] = password;
@@ -44,15 +38,11 @@ async function login(ctx) {
       ctx.response.status = 200;
       ctx.response.type = "application/json";
 
-      console.log(
-        "Sucess ... Login Complete ... Return Values: ",
-        ctx.response
-      );
+      console.log("Sucess ... Login Complete ... Return Values: ", ctx.response);
 
       return ctx.response;
-    } else {
-      throw "falure - no match for account in db";
     }
+    throw "falure - no match for account in db";
   } catch (e) {
     console.error(e);
 
@@ -81,18 +71,12 @@ async function verifyToken(ctx) {
     let username = "";
     let password = "";
     data.forEach(obj => {
-      if (obj.username) {
-        username = obj.username;
-      } else if (obj.password) {
-        password = obj.password;
-      }
+      if (obj.username) username = obj.username;
+      else if (obj.password) password = obj.password;
     });
 
-    if (decoded[username] === password) {
-      auth = true;
-    } else {
-      auth = false;
-    }
+    if (decoded[username] === password) auth = true;
+    else auth = false;
   } catch (e) {
     console.log(e);
   } finally {
@@ -101,12 +85,11 @@ async function verifyToken(ctx) {
       ctx.response.status = 200;
       ctx.response.type = "application/json";
       return ctx.response;
-    } else {
-      ctx.response.type = "application/json";
-      ctx.response.body = { sucess: false };
-      ctx.response.status = 400;
-      return ctx.response;
     }
+    ctx.response.type = "application/json";
+    ctx.response.body = { sucess: false };
+    ctx.response.status = 400;
+    return ctx.response;
   }
 }
 
