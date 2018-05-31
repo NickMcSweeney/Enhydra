@@ -1,0 +1,20 @@
+What is it that excites you?
+
+What about you makes you a good fit?
+I have good intuition, I learn quickly and work hard to do it.
+I do my work because I think what I do is interesting, not for the grades or the money.
+I am fascinated by security, privacy and how people think, so working with a privacy focused search engine is about as cool as you get.
+In my current work I work very closely with UI/UX designers on predevelopment and proof of concept projects.
+I am a very self directed worker. I function well in environments where I have low levels of direction.
+
+What is the most impactful improvement?
+Local user profiles. Allow data to be saved locally to create user profiles that provide personalized search results.
+Possible implementation could be through creation of a "Super Cookie"
+This should be done because it provides an answer to the biggest complaint that people have about a search engine that doesn't track you.
+People are used to having their search engine "know" them and provide results tailored specifically them.
+I think that you can give people the power to have a profile that they have 100% control of that doesn't compromise their privacy.
+The main issue I see is that this would mean that when someone makes a search there would be a larger amount of data processing.
+However I think that to a large degree this could function like having a remotely located database.
+
+
+Any questions?

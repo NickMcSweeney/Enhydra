@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="80" viewBox="0 0 100 80">
+  <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="4">
+    <path d="M2,78 L95.4417704,78 L98,78 L98,5 C98,3.34314575 96.6568542,2 95,2 L5,2 C3.34314575,2 2,3.34314575 2,5 L2,78 Z"/>
+    <path stroke-linecap="square" d="M2,12.7272727 L98,12.7272727"/>
+    <polyline stroke-linecap="round" stroke-linejoin="round" points="82 34.545 68 41.521 82 49.091" transform="matrix(-1 0 0 1 150 0)"/>
+    <polyline stroke-linecap="round" stroke-linejoin="round" points="32 34.545 18 41.521 32 49.091"/>
+    <path stroke-linecap="round" d="M58.0314071,23.5937208 L39.9392914,63.5895881"/>
+  </g>
+</svg>

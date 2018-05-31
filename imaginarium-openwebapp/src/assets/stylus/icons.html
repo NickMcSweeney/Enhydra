@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>icons</title>
+    <style>
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .preview {
+            width: 100px;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .preview .inner {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background: #f5f5f5;
+            -webkit-border-radius: 3px 3px 0 0;
+            -moz-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0;
+        }
+
+        .preview .inner i {
+            line-height: 85px;
+            font-size: 40px;
+            color: #333;
+        }
+
+        .label {
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+            font-size: 10px;
+            font-family: Monaco, monospace;
+            color: #666;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background: #ddd;
+            -webkit-border-radius: 0 0 3px 3px;
+            -moz-border-radius: 0 0 3px 3px;
+            border-radius: 0 0 3px 3px;
+            color: #666;
+        }
+
+        @font-face {
+    font-family: "icons";
+    src: url("./icons.ttf?8190e34b7b3078c096394dfbbf07c38f") format("truetype");
+}
+
+i {
+    line-height: 1;
+}
+
+i:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    vertical-align: top;
+}
+
+.icons-accounts:before {
+    content: "\f101";
+}
+.icons-add:before {
+    content: "\f102";
+}
+.icons-all:before {
+    content: "\f103";
+}
+.icons-approval:before {
+    content: "\f104";
+}
+.icons-arrow-combo:before {
+    content: "\f105";
+}
+.icons-arrow-down:before {
+    content: "\f106";
+}
+.icons-arrow-left:before {
+    content: "\f107";
+}
+.icons-arrow-right:before {
+    content: "\f108";
+}
+.icons-arrow-solid-down:before {
+    content: "\f109";
+}
+.icons-arrow-solid-left:before {
+    content: "\f10a";
+}
+.icons-arrow-solid-right:before {
+    content: "\f10b";
+}
+.icons-arrow-solid-up:before {
+    content: "\f10c";
+}
+.icons-arrow-up:before {
+    content: "\f10d";
+}
+.icons-asterisk:before {
+    content: "\f10e";
+}
+.icons-attach:before {
+    content: "\f10f";
+}
+.icons-attention:before {
+    content: "\f110";
+}
+.icons-bold:before {
+    content: "\f111";
+}
+.icons-bookmark:before {
+    content: "\f112";
+}
+.icons-bubble-solid:before {
+    content: "\f113";
+}
+.icons-calendar:before {
+    content: "\f114";
+}
+.icons-check:before {
+    content: "\f115";
+}
+.icons-chevron-down:before {
+    content: "\f116";
+}
+.icons-chevron-left:before {
+    content: "\f117";
+}
+.icons-chevron-right:before {
+    content: "\f118";
+}
+.icons-chevron:before {
+    content: "\f119";
+}
+.icons-circle-notch:before {
+    content: "\f11a";
+}
+.icons-clock:before {
+    content: "\f11b";
+}
+.icons-close:before {
+    content: "\f11c";
+}
+.icons-code:before {
+    content: "\f11d";
+}
+.icons-coding-1:before {
+    content: "\f11e";
+}
+.icons-coding-2:before {
+    content: "\f11f";
+}
+.icons-coding:before {
+    content: "\f120";
+}
+.icons-cog:before {
+    content: "\f121";
+}
+.icons-comment:before {
+    content: "\f122";
+}
+.icons-complete:before {
+    content: "\f123";
+}
+.icons-contacts:before {
+    content: "\f124";
+}
+.icons-content:before {
+    content: "\f125";
+}
+.icons-context-menu:before {
+    content: "\f126";
+}
+.icons-dashboard:before {
+    content: "\f127";
+}
+.icons-delivery:before {
+    content: "\f128";
+}
+.icons-design-tool:before {
+    content: "\f129";
+}
+.icons-document:before {
+    content: "\f12a";
+}
+.icons-dont:before {
+    content: "\f12b";
+}
+.icons-download:before {
+    content: "\f12c";
+}
+.icons-edit:before {
+    content: "\f12d";
+}
+.icons-exchange:before {
+    content: "\f12e";
+}
+.icons-file-add:before {
+    content: "\f12f";
+}
+.icons-file-empty:before {
+    content: "\f130";
+}
+.icons-file-exchange:before {
+    content: "\f131";
+}
+.icons-flag-solid:before {
+    content: "\f132";
+}
+.icons-flag:before {
+    content: "\f133";
+}
+.icons-folder-empty:before {
+    content: "\f134";
+}
+.icons-folder-open-empty:before {
+    content: "\f135";
+}
+.icons-folder-open:before {
+    content: "\f136";
+}
+.icons-folder:before {
+    content: "\f137";
+}
+.icons-glasses:before {
+    content: "\f138";
+}
+.icons-google-1:before {
+    content: "\f139";
+}
+.icons-google:before {
+    content: "\f13a";
+}
+.icons-highlight:before {
+    content: "\f13b";
+}
+.icons-hosting:before {
+    content: "\f13c";
+}
+.icons-html:before {
+    content: "\f13d";
+}
+.icons-image-fpo-solid:before {
+    content: "\f13e";
+}
+.icons-image-fpo:before {
+    content: "\f13f";
+}
+.icons-image:before {
+    content: "\f140";
+}
+.icons-ind-sent:before {
+    content: "\f141";
+}
+.icons-indent-decrease:before {
+    content: "\f142";
+}
+.icons-indent-increase:before {
+    content: "\f143";
+}
+.icons-info:before {
+    content: "\f144";
+}
+.icons-italic:before {
+    content: "\f145";
+}
+.icons-layout:before {
+    content: "\f146";
+}
+.icons-link-broken:before {
+    content: "\f147";
+}
+.icons-link:before {
+    content: "\f148";
+}
+.icons-list:before {
+    content: "\f149";
+}
+.icons-logout:before {
+    content: "\f14a";
+}
+.icons-mag:before {
+    content: "\f14b";
+}
+.icons-mail-solid:before {
+    content: "\f14c";
+}
+.icons-mail:before {
+    content: "\f14d";
+}
+.icons-market:before {
+    content: "\f14e";
+}
+.icons-message:before {
+    content: "\f14f";
+}
+.icons-meter:before {
+    content: "\f150";
+}
+.icons-note-solid:before {
+    content: "\f151";
+}
+.icons-note:before {
+    content: "\f152";
+}
+.icons-only:before {
+    content: "\f153";
+}
+.icons-paper-plane:before {
+    content: "\f154";
+}
+.icons-paper:before {
+    content: "\f155";
+}
+.icons-pause:before {
+    content: "\f156";
+}
+.icons-person:before {
+    content: "\f157";
+}
+.icons-photo-camera:before {
+    content: "\f158";
+}
+.icons-play:before {
+    content: "\f159";
+}
+.icons-plus-1:before {
+    content: "\f15a";
+}
+.icons-plus-2:before {
+    content: "\f15b";
+}
+.icons-plus:before {
+    content: "\f15c";
+}
+.icons-projects:before {
+    content: "\f15d";
+}
+.icons-quality:before {
+    content: "\f15e";
+}
+.icons-question-circle-o:before {
+    content: "\f15f";
+}
+.icons-quote:before {
+    content: "\f160";
+}
+.icons-reading:before {
+    content: "\f161";
+}
+.icons-refresh:before {
+    content: "\f162";
+}
+.icons-reply:before {
+    content: "\f163";
+}
+.icons-scoping:before {
+    content: "\f164";
+}
+.icons-search:before {
+    content: "\f165";
+}
+.icons-sketch:before {
+    content: "\f166";
+}
+.icons-specific:before {
+    content: "\f167";
+}
+.icons-spelling:before {
+    content: "\f168";
+}
+.icons-spinner:before {
+    content: "\f169";
+}
+.icons-strategy:before {
+    content: "\f16a";
+}
+.icons-strikethrough:before {
+    content: "\f16b";
+}
+.icons-tasks:before {
+    content: "\f16c";
+}
+.icons-text-size:before {
+    content: "\f16d";
+}
+.icons-this:before {
+    content: "\f16e";
+}
+.icons-tools-sm:before {
+    content: "\f16f";
+}
+.icons-tools:before {
+    content: "\f170";
+}
+.icons-trash:before {
+    content: "\f171";
+}
+.icons-underline:before {
+    content: "\f172";
+}
+.icons-upload-solid:before {
+    content: "\f173";
+}
+.icons-upload:before {
+    content: "\f174";
+}
+.icons-wifi:before {
+    content: "\f175";
+}
+
+
+    </style>
+</head>
+<body>
+
+    <h1>icons</h1>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-accounts"></i>
+            </span>
+            <br>
+            <span class='label'>accounts</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-add"></i>
+            </span>
+            <br>
+            <span class='label'>add</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-all"></i>
+            </span>
+            <br>
+            <span class='label'>all</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-approval"></i>
+            </span>
+            <br>
+            <span class='label'>approval</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-arrow-combo"></i>
+            </span>
+            <br>
+            <span class='label'>arrow-combo</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-arrow-down"></i>
+            </span>
+            <br>
+            <span class='label'>arrow-down</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-arrow-left"></i>
+            </span>
+            <br>
+            <span class='label'>arrow-left</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-arrow-right"></i>
+            </span>
+            <br>
+            <span class='label'>arrow-right</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-arrow-solid-down"></i>
+            </span>
+            <br>
+            <span class='label'>arrow-solid-down</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-arrow-solid-left"></i>
+            </span>
+            <br>
+            <span class='label'>arrow-solid-left</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-arrow-solid-right"></i>
+            </span>
+            <br>
+            <span class='label'>arrow-solid-right</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-arrow-solid-up"></i>
+            </span>
+            <br>
+            <span class='label'>arrow-solid-up</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-arrow-up"></i>
+            </span>
+            <br>
+            <span class='label'>arrow-up</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-asterisk"></i>
+            </span>
+            <br>
+            <span class='label'>asterisk</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-attach"></i>
+            </span>
+            <br>
+            <span class='label'>attach</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-attention"></i>
+            </span>
+            <br>
+            <span class='label'>attention</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-bold"></i>
+            </span>
+            <br>
+            <span class='label'>bold</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-bookmark"></i>
+            </span>
+            <br>
+            <span class='label'>bookmark</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-bubble-solid"></i>
+            </span>
+            <br>
+            <span class='label'>bubble-solid</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-calendar"></i>
+            </span>
+            <br>
+            <span class='label'>calendar</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-check"></i>
+            </span>
+            <br>
+            <span class='label'>check</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-chevron-down"></i>
+            </span>
+            <br>
+            <span class='label'>chevron-down</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-chevron-left"></i>
+            </span>
+            <br>
+            <span class='label'>chevron-left</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-chevron-right"></i>
+            </span>
+            <br>
+            <span class='label'>chevron-right</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-chevron"></i>
+            </span>
+            <br>
+            <span class='label'>chevron</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-circle-notch"></i>
+            </span>
+            <br>
+            <span class='label'>circle-notch</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-clock"></i>
+            </span>
+            <br>
+            <span class='label'>clock</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-close"></i>
+            </span>
+            <br>
+            <span class='label'>close</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-code"></i>
+            </span>
+            <br>
+            <span class='label'>code</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-coding-1"></i>
+            </span>
+            <br>
+            <span class='label'>coding-1</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-coding-2"></i>
+            </span>
+            <br>
+            <span class='label'>coding-2</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-coding"></i>
+            </span>
+            <br>
+            <span class='label'>coding</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-cog"></i>
+            </span>
+            <br>
+            <span class='label'>cog</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-comment"></i>
+            </span>
+            <br>
+            <span class='label'>comment</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-complete"></i>
+            </span>
+            <br>
+            <span class='label'>complete</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-contacts"></i>
+            </span>
+            <br>
+            <span class='label'>contacts</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-content"></i>
+            </span>
+            <br>
+            <span class='label'>content</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-context-menu"></i>
+            </span>
+            <br>
+            <span class='label'>context-menu</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-dashboard"></i>
+            </span>
+            <br>
+            <span class='label'>dashboard</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-delivery"></i>
+            </span>
+            <br>
+            <span class='label'>delivery</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-design-tool"></i>
+            </span>
+            <br>
+            <span class='label'>design-tool</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-document"></i>
+            </span>
+            <br>
+            <span class='label'>document</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-dont"></i>
+            </span>
+            <br>
+            <span class='label'>dont</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-download"></i>
+            </span>
+            <br>
+            <span class='label'>download</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-edit"></i>
+            </span>
+            <br>
+            <span class='label'>edit</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-exchange"></i>
+            </span>
+            <br>
+            <span class='label'>exchange</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-file-add"></i>
+            </span>
+            <br>
+            <span class='label'>file-add</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-file-empty"></i>
+            </span>
+            <br>
+            <span class='label'>file-empty</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-file-exchange"></i>
+            </span>
+            <br>
+            <span class='label'>file-exchange</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-flag-solid"></i>
+            </span>
+            <br>
+            <span class='label'>flag-solid</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-flag"></i>
+            </span>
+            <br>
+            <span class='label'>flag</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-folder-empty"></i>
+            </span>
+            <br>
+            <span class='label'>folder-empty</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-folder-open-empty"></i>
+            </span>
+            <br>
+            <span class='label'>folder-open-empty</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-folder-open"></i>
+            </span>
+            <br>
+            <span class='label'>folder-open</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-folder"></i>
+            </span>
+            <br>
+            <span class='label'>folder</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-glasses"></i>
+            </span>
+            <br>
+            <span class='label'>glasses</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-google-1"></i>
+            </span>
+            <br>
+            <span class='label'>google-1</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-google"></i>
+            </span>
+            <br>
+            <span class='label'>google</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-highlight"></i>
+            </span>
+            <br>
+            <span class='label'>highlight</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-hosting"></i>
+            </span>
+            <br>
+            <span class='label'>hosting</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-html"></i>
+            </span>
+            <br>
+            <span class='label'>html</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-image-fpo-solid"></i>
+            </span>
+            <br>
+            <span class='label'>image-fpo-solid</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-image-fpo"></i>
+            </span>
+            <br>
+            <span class='label'>image-fpo</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-image"></i>
+            </span>
+            <br>
+            <span class='label'>image</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-ind-sent"></i>
+            </span>
+            <br>
+            <span class='label'>ind-sent</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-indent-decrease"></i>
+            </span>
+            <br>
+            <span class='label'>indent-decrease</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-indent-increase"></i>
+            </span>
+            <br>
+            <span class='label'>indent-increase</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-info"></i>
+            </span>
+            <br>
+            <span class='label'>info</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-italic"></i>
+            </span>
+            <br>
+            <span class='label'>italic</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-layout"></i>
+            </span>
+            <br>
+            <span class='label'>layout</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-link-broken"></i>
+            </span>
+            <br>
+            <span class='label'>link-broken</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-link"></i>
+            </span>
+            <br>
+            <span class='label'>link</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-list"></i>
+            </span>
+            <br>
+            <span class='label'>list</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-logout"></i>
+            </span>
+            <br>
+            <span class='label'>logout</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-mag"></i>
+            </span>
+            <br>
+            <span class='label'>mag</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-mail-solid"></i>
+            </span>
+            <br>
+            <span class='label'>mail-solid</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-mail"></i>
+            </span>
+            <br>
+            <span class='label'>mail</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-market"></i>
+            </span>
+            <br>
+            <span class='label'>market</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-message"></i>
+            </span>
+            <br>
+            <span class='label'>message</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-meter"></i>
+            </span>
+            <br>
+            <span class='label'>meter</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-note-solid"></i>
+            </span>
+            <br>
+            <span class='label'>note-solid</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-note"></i>
+            </span>
+            <br>
+            <span class='label'>note</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-only"></i>
+            </span>
+            <br>
+            <span class='label'>only</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-paper-plane"></i>
+            </span>
+            <br>
+            <span class='label'>paper-plane</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-paper"></i>
+            </span>
+            <br>
+            <span class='label'>paper</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-pause"></i>
+            </span>
+            <br>
+            <span class='label'>pause</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-person"></i>
+            </span>
+            <br>
+            <span class='label'>person</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-photo-camera"></i>
+            </span>
+            <br>
+            <span class='label'>photo-camera</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-play"></i>
+            </span>
+            <br>
+            <span class='label'>play</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-plus-1"></i>
+            </span>
+            <br>
+            <span class='label'>plus-1</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-plus-2"></i>
+            </span>
+            <br>
+            <span class='label'>plus-2</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-plus"></i>
+            </span>
+            <br>
+            <span class='label'>plus</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-projects"></i>
+            </span>
+            <br>
+            <span class='label'>projects</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-quality"></i>
+            </span>
+            <br>
+            <span class='label'>quality</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-question-circle-o"></i>
+            </span>
+            <br>
+            <span class='label'>question-circle-o</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-quote"></i>
+            </span>
+            <br>
+            <span class='label'>quote</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-reading"></i>
+            </span>
+            <br>
+            <span class='label'>reading</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-refresh"></i>
+            </span>
+            <br>
+            <span class='label'>refresh</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-reply"></i>
+            </span>
+            <br>
+            <span class='label'>reply</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-scoping"></i>
+            </span>
+            <br>
+            <span class='label'>scoping</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-search"></i>
+            </span>
+            <br>
+            <span class='label'>search</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-sketch"></i>
+            </span>
+            <br>
+            <span class='label'>sketch</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-specific"></i>
+            </span>
+            <br>
+            <span class='label'>specific</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-spelling"></i>
+            </span>
+            <br>
+            <span class='label'>spelling</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-spinner"></i>
+            </span>
+            <br>
+            <span class='label'>spinner</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-strategy"></i>
+            </span>
+            <br>
+            <span class='label'>strategy</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-strikethrough"></i>
+            </span>
+            <br>
+            <span class='label'>strikethrough</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-tasks"></i>
+            </span>
+            <br>
+            <span class='label'>tasks</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-text-size"></i>
+            </span>
+            <br>
+            <span class='label'>text-size</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-this"></i>
+            </span>
+            <br>
+            <span class='label'>this</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-tools-sm"></i>
+            </span>
+            <br>
+            <span class='label'>tools-sm</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-tools"></i>
+            </span>
+            <br>
+            <span class='label'>tools</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-trash"></i>
+            </span>
+            <br>
+            <span class='label'>trash</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-underline"></i>
+            </span>
+            <br>
+            <span class='label'>underline</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-upload-solid"></i>
+            </span>
+            <br>
+            <span class='label'>upload-solid</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-upload"></i>
+            </span>
+            <br>
+            <span class='label'>upload</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="icons-wifi"></i>
+            </span>
+            <br>
+            <span class='label'>wifi</span>
+        </div>
+
+
+</body>
+</html>

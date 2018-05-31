@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="80" viewBox="0 0 100 80">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="96.154" height="20.13" x="1.923" y="1.923" stroke="#FFF" stroke-width="3.846" rx="1.282"/>
+    <ellipse cx="14.744" cy="11.988" fill="#FFF" rx="2.564" ry="2.664"/>
+    <ellipse cx="24.359" cy="11.988" fill="#FFF" rx="2.564" ry="2.664"/>
+    <ellipse cx="33.333" cy="11.988" fill="#FFF" rx="2.564" ry="2.664"/>
+    <polyline stroke="#FFF" stroke-linejoin="round" stroke-width="3.846" points="2.564 29.304 2.564 79.92 97.436 79.92 97.436 29.304"/>
+    <path stroke="#FFF" stroke-linecap="square" stroke-width="3.846" d="M57.0512821 31.968032L85.8974359 31.968032M57.0512821 41.2920413L85.8974359 41.2920413M57.0512821 51.9480519L85.8974359 51.9480519M57.0512821 61.2720613L85.8974359 61.2720613M57.0512821 70.5960706L85.8974359 70.5960706"/>
+    <rect width="32.051" height="38.778" x="14.103" y="31.227" stroke="#FFF" stroke-width="3.846" rx="1.282"/>
+  </g>
+</svg>
