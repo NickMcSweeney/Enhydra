@@ -1,16 +1,28 @@
 git pull
 
+# Building Imaginarium
 cd ./imaginarium-openwebapp
-npm i
-npm upgrade
+printf "\nUpdating Imaginarium Packages...\n"
+npm i &&
+npm upgrade &&
+printf "\nBuilding Imaginarium app...\n"
+npm run build
 cd ../
+wait
 
-cd ./lutra-services
-npm i
-npm upgrade
-cd ../
-
+# Building Lutris
 cd ./lutris-securewebapp
-npm i
-npm upgrade
+printf "\nUpdating Lutris Packages...\n"
+npm i &&
+npm upgrade &&
+printf "\nBuilding Lutris app...\n"
+npm run build
 cd ../
+wait
+
+# Starting Lutra
+cd ./lutra-services
+printf "\nUpdating Lutra Service Packages...\n"
+npm i && npm upgrade
+cd ../
+wait

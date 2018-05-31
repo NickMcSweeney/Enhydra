@@ -14,25 +14,22 @@ const dotenv = require("dotenv").config({ path: PATH + ".env" });
 if (dotenv.error) return console.error(dotenv.error);
 const ENV = process.env;
 
-console.log("server", ENV.PWD);
-
-const backend = new Koa();
-const frontend = new Koa();
+const lutra = new Koa();
+const lutris = new Koa();
+const imaginarium = new Koa();
 const route = new Router();
 
 const myRoutes = require("./Routes");
 
-console.log(myRoutes);
+console.log(`\nStarting ${ENV.APP_NAME} server @ ${ENV.BASE_URL}\n`);
 
-console.log(`Starting ${ENV.APP_NAME} server @ ${ENV.BASE_URL}`);
+route.post("/login", myRoutes.login);
+route.post("/verifyToken", myRoutes.verifyToken);
+route.post("/blog/addItem", myRoutes.saveEntry);
+route.post("/blog/getItem", myRoutes.getItem);
+route.get("/blog/listItems", myRoutes.listBlogItems);
 
-route.post("/login", myRoutes.Auth.login);
-route.post("/verifyToken", myRoutes.Auth.verifyToken);
-route.post("/blog/addItem", myRoutes.Data.saveEntry);
-route.post("/blog/getItem", myRoutes.Data.getItem);
-route.get("/blog/listItems", myRoutes.Data.listBlogItems);
-
-route.get("/test/", myRoutes.Data.test);
+route.get("/test/", myRoutes.test);
 // route.get("/readAll/", myRoutes.readFromDb);
 // route.get("/getNamedData/:item", myRoutes.getNamedData);
 //
@@ -40,15 +37,22 @@ route.get("/test/", myRoutes.Data.test);
 // route.post("/writeDbEncrypt/", myRoutes.writeDbEncrypt);
 // route.post("/writeDb/", myRoutes.addToDb);
 
-backend.use(cors());
-backend.use(bodyParser());
-backend.use(route.routes());
+lutra.use(cors());
+lutra.use(bodyParser());
+lutra.use(route.routes());
 
-frontend.use(mount("/", serve(ENV.SITE_PATH)));
+const IMAGINARIUM = path.join(__dirname, "../", ENV.IMAGINARIUM_PATH);
+const LUTRIS = path.join(__dirname, "../", ENV.LUTRIS_PATH);
+
+imaginarium.use(mount("/", serve(IMAGINARIUM)));
+lutris.use(mount("/", serve(LUTRIS)));
 
 // start the server
-backend.listen(ENV.SERVER_PORT, ENV.SERVER_IP);
-console.log("Backend started");
+lutra.listen(ENV.LUTRA_PORT, ENV.LUTRA_IP);
+console.log("Lutra started at: " + ENV.LUTRA_PORT);
 
-frontend.listen(ENV.SITE_PORT, ENV.SITE_IP);
-console.log("Frontend started");
+imaginarium.listen(ENV.IMAGINARIUM_PORT, ENV.IMAGINARIUM_IP);
+console.log("Frontend Imaginarium started at: " + ENV.IMAGINARIUM_PORT);
+
+lutris.listen(ENV.LUTRIS_PORT, ENV.LUTRIS_IP);
+console.log("Frontend Lutris started at: " + ENV.LUTRIS_PORT);

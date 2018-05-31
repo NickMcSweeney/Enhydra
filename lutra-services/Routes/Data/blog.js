@@ -1,29 +1,12 @@
 const fs = require("fs");
 const assert = require("assert");
 
-const GetDatabase = require("../Services");
+const { loadDB } = require("../../Libraries/Utils");
 
 module.exports = {
-  test: async ctx => {
-    try {
-      ctx.response.status = 200;
-      ctx.response.type = "application/json";
-      ctx.response.body = {
-        text: `it's working still`,
-      };
-    } catch (e) {
-      console.error(e);
-      ctx.response.status = 400;
-      ctx.response.type = "application/json";
-      ctx.response.body = {
-        text: `it's not working`,
-      };
-    }
-  },
-
   getNamedData: async (ctx, item) => {
     try {
-      const db = await GetDatabase.loadDB();
+      const db = await loadDB();
       const Lutra = db.collection("lutra");
       const data = await Lutra.find({ item }).toArray();
       ctx.response.body = { data };
@@ -39,7 +22,7 @@ module.exports = {
 
   listBlogItems: async ctx => {
     try {
-      const db = await GetDatabase.loadDB();
+      const db = await loadDB();
       const blogDB = db.collection("blog");
       const data = await blogDB.find({}).toArray();
 
@@ -69,7 +52,7 @@ module.exports = {
       const item = ctx.request.body.content;
       console.log("hey guys??", item);
 
-      const db = await GetDatabase.loadDB();
+      const db = await loadDB();
       const blogDB = db.collection("blog");
       const data = await blogDB.find({}).toArray();
 
@@ -104,7 +87,7 @@ module.exports = {
     let decoded = null;
     try {
       decoded = await jwt.verify(token, cert);
-      const db = await GetDatabase.loadDB();
+      const db = await loadDB();
       const adminDB = db.collection("admin");
       const data = await adminDB.find({}).toArray();
       let username = "";

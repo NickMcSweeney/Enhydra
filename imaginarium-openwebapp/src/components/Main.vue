@@ -28,9 +28,9 @@ export default {
       title: "Welcome to My web page",
       intro: "My name is Nicholas Shindler",
       msg:
-        "I am a software developer among other things. I bult this site to play around this web tech, also there's (barely) a blog, and I am in process of adding my portfolio.",
+        "I am a software developer among other things. I bult this site to play around this web tech, also there's (barely) a blog, and I am in process of adding my portfolio."
     };
-  },
+  }
 };
 </script>
 

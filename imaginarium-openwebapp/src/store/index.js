@@ -4,8 +4,7 @@ import Vuex from "vuex";
 // vue needs loaded and vuex prior to this script included
 Vue.use(Vuex);
 
-const PROD_URL = "http://www.lutrisimaginarium.com:8080";
-const SECURE_PROD_URL = "https://www.lutrisimaginarium.com:8088";
+const API_URL = "https://lutra.lutrisimaginarium.com";
 
 export const store = new Vuex.Store({
   state: {
@@ -18,9 +17,9 @@ export const store = new Vuex.Store({
       title: null,
       subtitle: null,
       bodyText: null,
-      imgUrl: "../assets/the_cloud.png",
+      imgUrl: "../assets/the_cloud.png"
     },
-    blogs: {},
+    blogs: {}
   },
   mutations: {
     setCurrentStory(state, value) {
@@ -34,7 +33,7 @@ export const store = new Vuex.Store({
     },
     setBlogList(state, value) {
       state.blogList = value;
-    },
+    }
   },
   getters: {
     getCurrentStory(state) {
@@ -45,7 +44,7 @@ export const store = new Vuex.Store({
     },
     isAuth(state) {
       return state.auth;
-    },
+    }
   },
   actions: {
     setCurrentStory(context, payload) {
@@ -61,10 +60,10 @@ export const store = new Vuex.Store({
         headers,
         body,
         mode: "cors",
-        cache: "default",
+        cache: "default"
       };
 
-      fetch(PROD_URL + "/blog/getItem/", init)
+      fetch(API_URL + "/blog/getItem/", init)
         .then(res => {
           if (res.status === 200) {
             return res.json();
@@ -88,10 +87,10 @@ export const store = new Vuex.Store({
         method: "GET",
         headers,
         mode: "cors",
-        cache: "default",
+        cache: "default"
       };
 
-      fetch(PROD_URL + "/blog/listItems", init)
+      fetch(API_URL + "/blog/listItems", init)
         .then(res => {
           if (res.status === 200) {
             return res.json();
@@ -121,10 +120,10 @@ export const store = new Vuex.Store({
         headers,
         body,
         mode: "cors",
-        cache: "default",
+        cache: "default"
       };
 
-      fetch(SECURE_PROD_URL + "/blog/addItem", init)
+      fetch(API_URL + "/blog/addItem", init)
         .then(res => {
           if (res.status === 200) {
             return res.json();
@@ -155,10 +154,10 @@ export const store = new Vuex.Store({
         headers,
         body,
         mode: "cors",
-        cache: "default",
+        cache: "default"
       };
 
-      fetch(SECURE_PROD_URL + "/login/", init)
+      fetch(API_URL + "/login/", init)
         .then(res => {
           if (res.status === 200) {
             return res.json();
@@ -181,6 +180,6 @@ export const store = new Vuex.Store({
           context.commit("setAuth", false);
           console.error(e);
         });
-    },
-  },
+    }
+  }
 });

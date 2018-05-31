@@ -42,14 +42,14 @@ export default {
       entry: {
         title: null,
         subtitle: null,
-        body: null,
-      },
+        body: null
+      }
     };
   },
   computed: {
     authenticated() {
       return this.$store.getters.isAuth;
-    },
+    }
   },
   methods: {
     nextinput() {
@@ -61,7 +61,7 @@ export default {
       try {
         const res = this.$store.dispatch("loginBuddhaMode", {
           username,
-          password,
+          password
         });
         if (res) {
           console.log("Success!");
@@ -77,16 +77,16 @@ export default {
       try {
         this.$store.dispatch("saveBlogEntry", {
           userJwt,
-          content: this.entry,
+          content: this.entry
         });
       } catch (e) {
         console.error(e);
       }
-    },
+    }
   },
   mounted() {
     //do something after mounting vue instance
-  },
+  }
 };
 </script>
 

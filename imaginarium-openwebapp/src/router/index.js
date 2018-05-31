@@ -14,39 +14,39 @@ export default new Router({
     {
       path: "/",
       name: "Main",
-      component: Main,
+      component: Main
     },
     {
       path: "/blog",
       name: "Blog",
-      component: Blog,
+      component: Blog
     },
     {
-      path: '/portfolio',
+      path: "/portfolio",
       redirect: {
-        name: 'PortfolioMenu'
+        name: "PortfolioMenu"
       }
     },
     {
       path: "/portfolio/menu",
       name: "PortfolioMenu",
-      component: PortfolioMenu,
+      component: PortfolioMenu
     },
     {
       path: "/portfolio/:section",
       name: "Portfolio",
       component: Portfolio,
-      props: true,
+      props: true
     },
     {
       path: "/about",
       name: "About",
-      component: About,
+      component: About
     },
     {
       path: "/buddha-mode",
       name: "BuddhaMode",
-      component: BuddhaMode,
-    },
-  ],
+      component: BuddhaMode
+    }
+  ]
 });

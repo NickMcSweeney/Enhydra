@@ -2,12 +2,12 @@ const jwt = require("jsonwebtoken");
 const fs = require("fs");
 const assert = require("assert");
 
-const GetDatabase = require("../Services");
+const { loadDB } = require("../../Libraries/Utils");
 
 async function login(ctx) {
   console.log("Starting Login...");
   try {
-    const db = await GetDatabase.loadDB();
+    const db = await loadDB();
     const adminDB = db.collection("admin");
     const data = await adminDB.find({}).toArray();
 
@@ -75,7 +75,7 @@ async function verifyToken(ctx) {
   let auth = null;
   try {
     decoded = await jwt.verify(token, cert);
-    const db = await GetDatabase.loadDB();
+    const db = await loadDB();
     const adminDB = db.collection("admin");
     const data = await adminDB.find({}).toArray();
     let username = "";

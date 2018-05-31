@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{'dark-mode': nameRoute}">
+  <div id="app" :class="{'dark-mode': routeNameIsBuddha}">
     <ul>
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/blog">Blog</router-link></li>
@@ -15,14 +15,16 @@
 export default {
   name: "app",
   computed: {
-    nameRoute() {
-      return (
+    routeNameIsBuddha() {
+      if (
         this.$route.name == "BuddhaMode" ||
         this.$route.path == "/buddha-mode" ||
         this.$route.fullPath == "/buddha-mode/"
-      );
-    },
-  },
+      )
+        return true;
+      return false;
+    }
+  }
 };
 </script>
 

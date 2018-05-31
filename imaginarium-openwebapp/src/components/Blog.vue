@@ -32,7 +32,7 @@ export default {
     return {
       imgUrl: "",
       showStory: false,
-      showMenu: false,
+      showMenu: false
     };
   },
   computed: {
@@ -41,7 +41,7 @@ export default {
     },
     currentStory() {
       return this.$store.getters.getCurrentStory;
-    },
+    }
   },
   methods: {
     expandMenu() {
@@ -54,12 +54,12 @@ export default {
     },
     clearStory() {
       this.showStory = false;
-    },
+    }
   },
   mounted() {
     //do something after mounting vue instance
     this.$store.dispatch("blogList");
-  },
+  }
 };
 </script>
 
