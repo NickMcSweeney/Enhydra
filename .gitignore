@@ -65,5 +65,5 @@ typings/
 
 
 # dist folders
-static-appfiles/dist-imaginarium
-static-appfiles/dist-lutris
+static-appfiles/dist-imaginarium/*
+static-appfiles/dist-lutris/*
