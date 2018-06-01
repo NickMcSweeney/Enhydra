@@ -48,11 +48,11 @@ imaginarium.use(mount("/", serve(IMAGINARIUM)));
 lutris.use(mount("/", serve(LUTRIS)));
 
 // start the server
-lutra.listen(ENV.LUTRA_PORT, ENV.LUTRA_IP);
-console.log("Lutra started at: " + ENV.LUTRA_PORT);
-
-imaginarium.listen(ENV.IMAGINARIUM_PORT, ENV.IMAGINARIUM_IP);
+imaginarium.listen(ENV.IMAGINARIUM_PORT, "127.0.0.1");
 console.log("Frontend Imaginarium started at: " + ENV.IMAGINARIUM_PORT);
 
-lutris.listen(ENV.LUTRIS_PORT, ENV.LUTRIS_IP);
+lutris.listen(ENV.LUTRIS_PORT, "127.0.0.1");
 console.log("Frontend Lutris started at: " + ENV.LUTRIS_PORT);
+
+lutra.listen(ENV.LUTRA_PORT, "127.0.0.1");
+console.log("Lutra started at: " + ENV.LUTRA_PORT);
