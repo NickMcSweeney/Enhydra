@@ -62,3 +62,8 @@ typings/
 
 # shared file system
 .static-sharefiles/*
+
+
+# dist folders
+static-appfiles/dist-imaginarium
+static-appfiles/dist-lutris

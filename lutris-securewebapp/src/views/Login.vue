@@ -50,7 +50,9 @@ export default {
   created() {
     // add cookie check here
     const userJwt = localStorage.getItem("user-jwt");
-    console.log("jwt", userJwt);
+    if (userJwt) {
+      console.log("jwt", userJwt);
+    }
   },
   updated() {
     // possible double check
@@ -59,11 +61,12 @@ export default {
     nextinput() {
       document.getElementById("user-password").focus();
     },
-    submitMe() {
+    async submitMe() {
       const username = this.username;
       const password = this.password;
+      console.log("Loging in: " + username);
       try {
-        const res = this.$store.dispatch("login", {
+        const res = await this.$store.dispatch("login", {
           username,
           password,
         });
