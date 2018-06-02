@@ -71,7 +71,9 @@ export default {
           password,
         });
         if (res.sucess) console.log("Success!");
-        else throw res;
+        else {
+          throw res;
+        }
       } catch (e) {
         console.error(e);
       }
